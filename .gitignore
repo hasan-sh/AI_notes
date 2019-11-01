@@ -1,8 +1,8 @@
 /*
 
 !.gitignore
-!**/*.html
-!**/*.css
-!**/*.js
-!**/*.png
+!pages/*.html
+!pages/*.css
+!pages/*.js
+!pages/*.png
 !README.md

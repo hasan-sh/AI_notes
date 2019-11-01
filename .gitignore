@@ -4,4 +4,10 @@
 !.gitignore
 !*.html
 !*.css
+!*.js
 !*.png
+
+!*.woff
+!*.eot
+!*.svg
+!*.ttf

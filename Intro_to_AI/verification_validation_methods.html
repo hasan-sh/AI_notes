@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<!-- based on a Pen by Devilish Alchemist @ http://codepen.io/devilishalchemist/pen/LERvpM -->
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluating verification and validation methods</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../_resources/css/normalize.min.css">
+  <link rel="stylesheet" href="../_resources/css/whhg.css">
+  <link rel="stylesheet" href="../_resources/css/fonts.css">
+  <link rel="stylesheet" href="../_resources/css/style.css">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <span id="view-toc" class="tooltip">&laquo; view index</span>
+    <span id="view-content" class="tooltip">return to content &raquo;</span>
+    <span id="view-next" class="tooltip">next page &raquo;</span>
+    <span id="view-prev" class="tooltip">&laquo; previous page</span>
+
+    <span class="menu_toggle">
+      <i class="menu_open icon icon-th-list"></i>
+      <i class="menu_close icon icon-import"></i>
+    </span>
+
+    <div id="navigation">
+      <ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a></li>
+<li><a href="../Intro_programming.html" title="Intro programming" class="page">Intro programming</a></li>
+<li><a href="../Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a>
+<ul>
+<li><a href="./AI_solutions.html" title="AI solutions" class="page">AI solutions</a></li>
+<li><a href="./alumni_lecture_01_10.html" title="alumni lecture 01 10" class="page">alumni lecture 01 10</a></li>
+<li><a href="./CW_notes.html" title="CW notes" class="page">CW notes</a></li>
+<li><a href="./MB_notes.html" title="MB notes" class="page">MB notes</a></li>
+<li><a href="./MH_notes.html" title="MH notes" class="page">MH notes</a></li>
+<li><a href="./notes_final_meeting.html" title="notes final meeting" class="page">notes final meeting</a></li>
+<li><b>verification validation methods</b></li>
+</ul>
+</li>
+<li><a href="../Psychology.html" title="Psychology" class="page">Psychology</a></li>
+</ul>
+
+      <span class="zimversion">
+        <!-- <small>built with</small><br><strong>Zim 0.65</strong>
+        <br>
+        --
+        <br> -->
+        <a href="https://github.com/hasan-sh/AI_notes">see<br> on Github<br><i class="icon icon-github"></i></a>
+      </span>
+    </div>
+
+    <main class="content">
+      <div class="content_inner">
+        <article>
+          <header>
+            <a id="navPrev" href='./notes_final_meeting.html'><span><i class="icon icon-chevron-left"></i></span></a>
+
+            <a id="navHome" href='../Home.html'><span><i class="icon icon-homealt"></i></span></a>
+
+            <a id="navNext" href='../Psychology.html'><span><i class="icon icon-chevron-right"></i></span></a>
+          </header>
+
+          <section>
+            <div class="page-title">
+              <h1><i class="icon icon-bookmarkalt"></i> Evaluating verification and validation methods <a name='Intro to AI:verification validation methods'></a></h1>
+            </div>
+            <div class="fade fade-top"></div>
+            <div class="page-body">
+              <h3>tech inter</h3>
+
+<br>
+
+<p>
+Technological intervention is about targeting certain problems by the means of technology.
+</p>
+
+<p>
+THere are different phases(technological intervention processes) for making the intervention systems: - Designing it; define system requirements and target groups &gt; e.g. app to help stop smoking: - epidemiological study, getting data relevant to your idea or the state of arts. - target group: who are those who smoke the most? Then get into that area more(e.g. males/females mainly, elderly ppl or adults ) - requirements: this phase should define what the app will be doing once a person makes an action; and how to react to that.
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Implementing it: design system architecture and inference engine, code
+<ul>
+<li>system architecture:</li>
+<li>inference engine: the logic of the targeted app and how should the app react.</li>
+<li>programming</li>
+</ul>
+</li>
+<li>Testing it: evaluate verification and fine-time parameters; <i>internal validity of the system</i>
+<ul>
+<li>Do the components work?</li>
+<li>Does the app(system) give the expected output based on the input?</li>
+</ul>
+</li>
+<li>Using it: validation + user evaluation; <i>external validity of the system</i>
+<ul>
+<li>Does the system help its users achieve their goal?</li>
+</ul></li>
+</ul>
+&gt; cause humans are hard to predict; logic differs most of the time
+</p>
+
+<p>
+<ul style='padding-left: 60pt'>
+<li>how is the overall UE?</li>
+</ul>
+&gt; do the users understand your system and how to use it?
+</p>
+
+<br>
+
+<h3>Verification &amp; Validation</h3>
+
+<br>
+
+<p>
+<i>verification</i> does the system comply with the rules you've built and relied on?
+</p>
+
+<p>
+<i>validation</i> process of checking whether the product meets the users' needs; e.g. did the targeted users actually stopped smoking?
+</p>
+
+<p>
+Each app should be presented to two different group: - Control group: ppl who aren't familiar with it and how your system is supposed to work
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Experimental group: ppl who know how to use it for getting the right results</li>
+</ul>
+</p>
+
+<br>
+
+<p>
+----
+</p>
+
+<h5>Exercise 1</h5>
+
+<br>
+
+<p>
+&gt; lifestyle and medical intervention app; supporting health care:
+</p>
+
+<p>
+Problem: tackling Alzheimer
+</p>
+
+<p>
+Designing the system: The AI needed for our system will rely on patients' medical history and making a knowledge graph to measure their illness and the cause of it.
+</p>
+
+<p>
+Test: By making a timetable that the patient has to o
+</p>
+
+<br>
+
+<p>
+----
+</p>
+
+<h3>Research protocol</h3>
+
+<br>
+
+<p>
+Important terms to know:
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Research question: what u want to know.</li>
+</ul>
+&gt; is it possible to reduce smoking behavior by using smart app?
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>hypothesis: what the outcome would be</li>
+<li>experimental and Control condition: ABOVE</li>
+</ul>
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Independent and dependent variables:
+<ul>
+<li>condition you applied for your experiment</li>
+</ul></li>
+</ul>
+&gt; smoking variable
+</p>
+
+<p>
+<ul style='padding-left: 60pt'>
+<li>result that depends on the independent variable</li>
+</ul>
+&gt; intervention process
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>subjects/participants: who are they? and are they relevant?</li>
+</ul>
+&gt; e.g male, dutch high educated etc..
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>possible confounding variables: things that could modify the results indirectly; and are hard to figure out and should always be considered.</li>
+</ul>
+&gt; make sure the results result by you really are expecting, and not by other factors.
+</p>
+
+<br>
+
+<p>
+<i>Validity</i>: is about figuring out whether the system you've built is doing what it's supposed to.
+</p>
+
+
+            </div>
+            <div class="fade fade-bottom"></div>
+          </section>
+
+          <footer>
+              <a href="#" class="scrollToTop" title="Back to top"><i class="icon icon-uploadalt"></i></a>
+              <b>Backlinks:</b>
+              <a class="page" href='../Intro_to_AI.html'>Intro to AI</a>
+              <br /><br />
+          </footer>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="../_resources/js/jquery.v2.1.3.min.js"></script>
+  <script src="../_resources/js/index.js"></script>
+
+</body>
+</html>

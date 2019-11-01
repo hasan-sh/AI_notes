@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<!-- based on a Pen by Devilish Alchemist @ http://codepen.io/devilishalchemist/pen/LERvpM -->
+<head>
+  <meta charset="UTF-8">
+  <title>Uninformed Search</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../_resources/css/normalize.min.css">
+  <link rel="stylesheet" href="../../_resources/css/whhg.css">
+  <link rel="stylesheet" href="../../_resources/css/fonts.css">
+  <link rel="stylesheet" href="../../_resources/css/style.css">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <span id="view-toc" class="tooltip">&laquo; view index</span>
+    <span id="view-content" class="tooltip">return to content &raquo;</span>
+    <span id="view-next" class="tooltip">next page &raquo;</span>
+    <span id="view-prev" class="tooltip">&laquo; previous page</span>
+
+    <span class="menu_toggle">
+      <i class="menu_open icon icon-th-list"></i>
+      <i class="menu_close icon icon-import"></i>
+    </span>
+
+    <div id="navigation">
+      <ul>
+<li><a href="../../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../../Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a>
+<ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a>
+<ul>
+<li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><b>Uninformed Search</b></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="../../Intro_programming.html" title="Intro programming" class="page">Intro programming</a></li>
+<li><a href="../../Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a></li>
+<li><a href="../../Psychology.html" title="Psychology" class="page">Psychology</a></li>
+</ul>
+
+      <span class="zimversion">
+        <!-- <small>built with</small><br><strong>Zim 0.65</strong>
+        <br>
+        --
+        <br> -->
+        <a href="https://github.com/hasan-sh/AI_notes">see<br> on Github<br><i class="icon icon-github"></i></a>
+      </span>
+    </div>
+
+    <main class="content">
+      <div class="content_inner">
+        <article>
+          <header>
+            <a id="navPrev" href='./Introduction.html'><span><i class="icon icon-chevron-left"></i></span></a>
+
+            <a id="navHome" href='../../Home.html'><span><i class="icon icon-homealt"></i></span></a>
+
+            <a id="navNext" href='../../Intro_programming.html'><span><i class="icon icon-chevron-right"></i></span></a>
+          </header>
+
+          <section>
+            <div class="page-title">
+              <h1><i class="icon icon-bookmarkalt"></i> Uninformed Search <a name='Intelligent systems:Home:Uninformed Search'></a></h1>
+            </div>
+            <div class="fade fade-top"></div>
+            <div class="page-body">
+              <p>
+Created woensdag 30 oktober 2019
+</p>
+
+<p>
+<sub>The following is  an example for applying the state-space approach!</sub><br>
+Two jars of 5 and 3 liters. The goal is to get 1 liter.<br>
+<b>State</b><br>
+<ul>
+<li>2 jars</li>
+<li>each can have an amount of water
+<ul>
+<li>the state representation could be like (x, y) where the numbers represent the the amount that could go into each jar; e.g. (0, 1) or (x, 2)</li>
+</ul></li>
+</ul>
+</p>
+
+<p>
+<b>Actions</b><br>
+<ul>
+<li>how many ways can you fill in the jars; <i>left: (x, y) -&gt; (5, y) or right (x, 3) </i><u>and most importantly is pouring from one jar to another</u></li>
+</ul>
+</p>
+
+<br>
+<br>
+
+<h5>Decision making as search</h5>
+
+<p>
+We have the space representation, then we search through the tree that represent the current state and the whole state of the game(or program)<br>
+<sub>When having the problem and having the goal declared, the the next step is building a tree in which you start from a node and write down what possible actions you can take, then the decision is when you decide whether the current node is the goal state you wanted, if not then expand and see other options.</sub>
+</p>
+
+<p>
+<img src="./Uninformed_Search/pasted_image.png">
+</p>
+
+<p>
+<i>Fringe</i> exists in the structure with which the space representation is implemented, and contains generated nodes which are not yet expanded; in the picture above it would be Arad, Fagaras, Oradea ad Rimmiou Vilcea!
+</p>
+
+<p>
+Algorithms for creating search trees:
+</p>
+
+<p>
+<b>Performance </b>is measured in<br>
+<ul>
+<li>Completeness; does it always find a solution if exists?</li>
+<li>Optimality; does it always find the least-cost solution?</li>
+<li>Time complexity; number of nodes checked/expanded? </li>
+<li>Space complexity; number of nodes stored in the state representation?
+<ul>
+<li>b - maximum branching factor of the search tree; <i>a fixed amount of choices</i></li>
+<li>d - depth of the least-cost solution</li>
+<li>m- max depth of the state space(may be <i>infinity</i>)</li>
+</ul></li>
+</ul>
+</p>
+
+<h5>BF</h5>
+
+<p>
+Is a breadth-first search in which the <i>fringe </i>is FIFO queue. Where the items in the queue will be checked after they're expanded; <i>or that are known</i><br>
+The <b>implementation</b> is simple<br>
+<ul>
+<li>start with the root</li>
+<li>put it into the FIFO(fringe)</li>
+<li>add the children successors at the end of the queue</li>
+<li>then check the first not checked item in the queue</li>
+</ul>
+</p>
+
+<p>
+<b>Performance </b>is measured in<br>
+<ul>
+<li>Completeness; does it always find a solution if exists? y</li>
+<li>Optimality; does it always find the least-cost solution? y</li>
+<li>Time complexity; number of nodes checked/expanded? 
+<ul>
+<li>would be expressed in: <b>b </b>to the power of<b> d = b^(d+1) </b></li>
+</ul>
+</li>
+<li>Space complexity; number of nodes stored in the state representation?
+<ul>
+<li>would be expressed in: <b>b </b>to the power of<b> d = b^(d+1) </b></li>
+</ul></li>
+</ul>
+</p>
+
+<br>
+
+<h5>DF</h5>
+
+<p>
+Is a depth-first search in the <i>fringe</i> <i>is a LIFO stack. </i>Where the<i> nodes and their sub-nodes </i>in the stack will be checked after they're expanded and goes to the next nodes.<br>
+<sub>A drawback is that DF might not find the solution ant thus gets stuck at some deep level. This happens if the state space tree has an infinite n of depth; which is likely.</sub>
+</p>
+
+<p>
+<b>Performance </b>is measured in<br>
+<ul>
+<li>Completeness; does it always find a solution if exists? not always</li>
+<li>Optimality; does it always find the least-cost solution? n</li>
+<li>Time complexity; number of nodes checked/expanded?
+<ul>
+<li>would be expressed in: <b>b </b>to the power of<b> d = b^(d+1) </b></li>
+</ul>
+</li>
+<li>Space complexity; number of nodes stored in the state representation?</li>
+<li>would be expressed in: <b>b </b>times <b>m = bm</b></li>
+</ul>
+</p>
+
+<h5>DL</h5>
+
+<p>
+Is a depth-limited, or <i>depth-first limited,</i> search in the <i>fringe</i> is a LIFO stack. And is a solution for the<i> pitfalls </i>of the plain DF<i> search</i><br>
+":Uninformed Search" <br>
+<b>Performance </b>is measured in<br>
+<ul>
+<li>Completeness; does it always find a solution if exists? yes if 1 &gt;= d</li>
+<li>Optimality; does it always find the least-cost solution? n</li>
+<li>Time complexity; number of nodes checked/expanded?
+<ul>
+<li>would be expressed in: <b>b  </b></li>
+</ul>
+</li>
+<li>Space complexity; number of nodes stored in the state representation?</li>
+<li>would be expressed in: <b>b </b>times <b>m = bm</b></li>
+</ul>
+</p>
+
+<h5>ID</h5>
+
+<p>
+Is a <i>iterative deeping</i> search; often used in combination with DF and it combines benefits of DF and BF search.<br>
+<sub>It works similar to DF search, the obvious difference is that it has a limit of how far deep it can go. </sub><br>
+<img src="file:///home/hasan_sh/Documents/modern_introduction_AI_1.tif"><br>
+<b>Performance </b>is measured in<br>
+<ul>
+<li>Completeness; does it always find a solution if exists? y</li>
+<li>Optimality; does it always find the least-cost solution? y</li>
+<li>Time complexity; number of nodes checked/expanded?
+<ul>
+<li>would be expressed in: <b>b </b>to the power of<b> d = b^(d) </b></li>
+</ul>
+</li>
+<li>Space complexity; number of nodes stored in the state representation?</li>
+<li>would be expressed in: <b>b </b>times <b>d = bd</b></li>
+</ul>
+</p>
+
+<br>
+
+<h5>Search direction</h5>
+
+<p>
+There are two ways<br>
+<ul>
+<li>Data-driven; where you start from a point to the goal</li>
+<li>Goal-driven; where you start from the goal back to the point</li>
+</ul>
+</p>
+
+<p>
+<sub>example of is professor Matt  is related to Williem van Oranje; goal-driven approach would be better 3^N vs 2^N</sub>
+</p>
+
+<br>
+
+
+            </div>
+            <div class="fade fade-bottom"></div>
+          </section>
+
+          <footer>
+              <a href="#" class="scrollToTop" title="Back to top"><i class="icon icon-uploadalt"></i></a>
+              <b>Backlinks:</b>
+              <a class="page" href='../../Intelligent_systems.html'>Intelligent systems</a>
+              <br /><br />
+          </footer>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../_resources/js/jquery.v2.1.3.min.js"></script>
+  <script src="../../_resources/js/index.js"></script>
+
+</body>
+</html>

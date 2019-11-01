@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<!-- based on a Pen by Devilish Alchemist @ http://codepen.io/devilishalchemist/pen/LERvpM -->
+<head>
+  <meta charset="UTF-8">
+  <title>Guest Lecture: Mark Hoogedoorn</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../_resources/css/normalize.min.css">
+  <link rel="stylesheet" href="../_resources/css/whhg.css">
+  <link rel="stylesheet" href="../_resources/css/fonts.css">
+  <link rel="stylesheet" href="../_resources/css/style.css">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <span id="view-toc" class="tooltip">&laquo; view index</span>
+    <span id="view-content" class="tooltip">return to content &raquo;</span>
+    <span id="view-next" class="tooltip">next page &raquo;</span>
+    <span id="view-prev" class="tooltip">&laquo; previous page</span>
+
+    <span class="menu_toggle">
+      <i class="menu_open icon icon-th-list"></i>
+      <i class="menu_close icon icon-import"></i>
+    </span>
+
+    <div id="navigation">
+      <ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a></li>
+<li><a href="../Intro_programming.html" title="Intro programming" class="page">Intro programming</a></li>
+<li><a href="../Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a>
+<ul>
+<li><a href="./AI_solutions.html" title="AI solutions" class="page">AI solutions</a></li>
+<li><a href="./alumni_lecture_01_10.html" title="alumni lecture 01 10" class="page">alumni lecture 01 10</a></li>
+<li><a href="./CW_notes.html" title="CW notes" class="page">CW notes</a></li>
+<li><a href="./MB_notes.html" title="MB notes" class="page">MB notes</a></li>
+<li><b>MH notes</b></li>
+<li><a href="./notes_final_meeting.html" title="notes final meeting" class="page">notes final meeting</a></li>
+<li><a href="./verification_validation_methods.html" title="verification validation methods" class="page">verification validation methods</a></li>
+</ul>
+</li>
+<li><a href="../Psychology.html" title="Psychology" class="page">Psychology</a></li>
+</ul>
+
+      <span class="zimversion">
+        <!-- <small>built with</small><br><strong>Zim 0.65</strong>
+        <br>
+        --
+        <br> -->
+        <a href="https://github.com/hasan-sh/AI_notes">see<br> on Github<br><i class="icon icon-github"></i></a>
+      </span>
+    </div>
+
+    <main class="content">
+      <div class="content_inner">
+        <article>
+          <header>
+            <a id="navPrev" href='./MB_notes.html'><span><i class="icon icon-chevron-left"></i></span></a>
+
+            <a id="navHome" href='../Home.html'><span><i class="icon icon-homealt"></i></span></a>
+
+            <a id="navNext" href='./notes_final_meeting.html'><span><i class="icon icon-chevron-right"></i></span></a>
+          </header>
+
+          <section>
+            <div class="page-title">
+              <h1><i class="icon icon-bookmarkalt"></i> Guest Lecture: Mark Hoogedoorn <a name='Intro to AI:MH notes'></a></h1>
+            </div>
+            <div class="fade fade-top"></div>
+            <div class="page-body">
+              <p>
+&gt; <b>Subject</b>: Machine learning: Intro &amp; trends.
+</p>
+
+<p>
+Hoogedoorn's position is ML and he loves it!
+</p>
+
+<p>
+Defs:
+</p>
+
+<p>
+Hype cycle: a representation of new emerging techs(see the pic on google)
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>innovation triggers; where the start is.</li>
+<li>ML won't be the solution for everything in the world.</li>
+<li></li>
+</ul>
+</p>
+
+<h2>ML:</h2>
+
+<br>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>is to automatically identify patterns from data</li>
+<li>"a computer program is said to learn from experience E with respect to some class of tasks T and performance P, if its performance at tasks in T improves with E" ~mitchell</li>
+</ul>
+</p>
+
+<h2>why is ML becoming popular?</h2>
+
+<br>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>increasing amount of data available</li>
+<li>more computational power</li>
+<li>better algorithms; to exploit the data in better way</li>
+</ul>
+</p>
+
+<h2>Tasks solved by ML:</h2>
+
+<br>
+
+<p>
+<ol style='padding-left: 30pt' type="1" start="1">
+<li>supervised learning: is the ml task of inferring a function from a set of labeled training</li>
+</ol>
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Image dataset: medical problem: the dataset is consist of rows and columns, which represent patients and their medical situation; each of which has features and target whether they're applicable or not; based on what the ML's process provide; e.g. whether their risk is high, low or medium; &gt; for each of node see if a person has problems with feature 1 if higher than 2 then if they have problems with features 3 if lower make their label as yes. &gt;it's using a tree search algorithm to know which person's health is low, high or medium.
+<ul>
+<li>neural networks:</li>
+</ul></li>
+</ul>
+&gt; many hidden layers then comes the classification process.
+</p>
+
+<p>
+<ul style='padding-left: 60pt'>
+<li>evaluation:
+<ul>
+<li>want to have models predict well for new examples</li>
+<li>train them(ml) on a training set and apply our algorithm to an independent test set to assess generalizability.</li>
+<li>this will show us how good it will work on new examples.</li>
+</ul></li>
+</ul>
+&gt; i.g. 1000 patients select a bunch of them and train with the decision tree take the rest and train them again and then comapre how th ml process did and the percentage it gave for each.
+</p>
+
+<br>
+
+<p>
+&gt; the data provided should be good to understand the problem and tackle it.
+</p>
+
+<p>
+<ol style='padding-left: 30pt' type="1" start="1">
+<li>in unsupervised learning: ther eis no target measure(label) and the goal is desciribe the associations and patterns among the attributes.</li>
+<li>reinforcement learning: tries to find optimal actions in a given situation so as to max a numerical reward that does not immediately come with the action but later in time.
+<ul>
+<li>what are the set of actions to get to the goal.</li>
+</ul></li>
+</ol>
+&gt; game; you don't know shooting an opponent might not be good for you, you only know at the of the game
+</p>
+
+<br>
+
+<h2>Steps to get results:</h2>
+
+<br>
+
+<p>
+&gt; CRISP-DM most popular; measuring modeling is a small part; evaluate the data time: data preparation takes the lagest amount of time. THen understanding it(happens before the last one). the rest of the steps is quite easy to be done.
+</p>
+
+<h2>Techniques:</h2>
+
+<br>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li></li>
+</ul>
+</p>
+
+<h2>Examples</h2>
+
+<br>
+
+<p>
+<b>ImageNET</b>: many hidden layers then comes the classification process: - <b>Deep learning</b>: is dividing the set of data into many(e.g. millions) unites that should in the end of the process meet the criteria of the provided data(e.g. images). 1. Neural networks: consists of inputs which get sent to each neural in the neural networks; hidden layers. then to classification layer! &gt; many hidden layers then comes the classification process. - input(e.g. cars) - Hidden layers: computational unites 1. pooling 2. convolution 3. 1; again 4. 2; again - Classification: 1. softmax 2. fully connected 3. flatten. - output
+</p>
+
+<pre>
+        INputs: x1, x2
+        hidden layers: w1, w2(w for weights)
+        then applies some function to get the output: e.g. x1*w1 + x2*w2 = w0
+        then if w0 &gt; a certain threshold then return 1 otherwise -1!
+</pre>
+
+<p>
+<ol style='padding-left: 30pt' type="1" start="1">
+<li>organize objects(1000 of them) into categories</li>
+<li>images:
+<ol type="1" start="1">
+<li>1.2m train examples(of data)</li>
+<li>100k test(not to label)</li>
+</ol></li>
+</ol>
+</p>
+
+
+            </div>
+            <div class="fade fade-bottom"></div>
+          </section>
+
+          <footer>
+              <a href="#" class="scrollToTop" title="Back to top"><i class="icon icon-uploadalt"></i></a>
+              <b>Backlinks:</b>
+              <a class="page" href='../Intro_to_AI.html'>Intro to AI</a>
+              <br /><br />
+          </footer>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="../_resources/js/jquery.v2.1.3.min.js"></script>
+  <script src="../_resources/js/index.js"></script>
+
+</body>
+</html>

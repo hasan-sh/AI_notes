@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<!-- based on a Pen by Devilish Alchemist @ http://codepen.io/devilishalchemist/pen/LERvpM -->
+<head>
+  <meta charset="UTF-8">
+  <title>Introduction</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../_resources/css/normalize.min.css">
+  <link rel="stylesheet" href="../../_resources/css/whhg.css">
+  <link rel="stylesheet" href="../../_resources/css/fonts.css">
+  <link rel="stylesheet" href="../../_resources/css/style.css">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <span id="view-toc" class="tooltip">&laquo; view index</span>
+    <span id="view-content" class="tooltip">return to content &raquo;</span>
+    <span id="view-next" class="tooltip">next page &raquo;</span>
+    <span id="view-prev" class="tooltip">&laquo; previous page</span>
+
+    <span class="menu_toggle">
+      <i class="menu_open icon icon-th-list"></i>
+      <i class="menu_close icon icon-import"></i>
+    </span>
+
+    <div id="navigation">
+      <ul>
+<li><a href="../../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../../Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a>
+<ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a>
+<ul>
+<li><b>Introduction</b></li>
+<li><a href="./Uninformed_Search.html" title="Uninformed Search" class="page">Uninformed Search</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="../../Intro_programming.html" title="Intro programming" class="page">Intro programming</a></li>
+<li><a href="../../Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a></li>
+<li><a href="../../Psychology.html" title="Psychology" class="page">Psychology</a></li>
+</ul>
+
+      <span class="zimversion">
+        <!-- <small>built with</small><br><strong>Zim 0.65</strong>
+        <br>
+        --
+        <br> -->
+        <a href="https://github.com/hasan-sh/AI_notes">see<br> on Github<br><i class="icon icon-github"></i></a>
+      </span>
+    </div>
+
+    <main class="content">
+      <div class="content_inner">
+        <article>
+          <header>
+            <a id="navPrev" href='../Home.html'><span><i class="icon icon-chevron-left"></i></span></a>
+
+            <a id="navHome" href='../../Home.html'><span><i class="icon icon-homealt"></i></span></a>
+
+            <a id="navNext" href='./Uninformed_Search.html'><span><i class="icon icon-chevron-right"></i></span></a>
+          </header>
+
+          <section>
+            <div class="page-title">
+              <h1><i class="icon icon-bookmarkalt"></i> Introduction <a name='Intelligent systems:Home:Introduction'></a></h1>
+            </div>
+            <div class="fade fade-top"></div>
+            <div class="page-body">
+              <p>
+Created dinsdag 29 oktober 2019
+</p>
+
+<h1>First part | Core topics</h1>
+
+<br>
+
+<h4>Topic 1 Search and heuristics</h4>
+
+<p>
+<b>Heuristics</b>: human knowledge where they make estimates based on what they, for instance, know about the current state of the game or environment.
+</p>
+
+<br>
+
+<h4>Topic 2: Adaptivity</h4>
+
+<p>
+Is crucial for agents as it is for humans; for us in the sense that we need adapt to the environment around us, thus identify objects, patterns or even threats.
+</p>
+
+<br>
+
+<h4>Topic 3: Knowledge</h4>
+
+<p>
+The knowledge needed for agents so that they can<br>
+<ul>
+<li>Abstract a state</li>
+<li>Base possible solutions on the knowledge</li>
+<li>And act accordingly</li>
+</ul>
+See franks presentation<b>(LINK)</b>
+</p>
+
+<br>
+<br>
+
+<h5>Course expectations</h5>
+
+<p>
+Basic knowledge and insights in Information Systems:<br>
+<ul>
+<li>State space representations</li>
+<li>Basic Search Strategies &amp; Advanced Search</li>
+<li>Agents</li>
+<li>Machine Learning</li>
+<li>Knowledge Based Reasoning</li>
+<li>Planning, Natural Language Processing, Robotics, Perception</li>
+</ul>
+</p>
+
+<p>
+<a href="../../Home.html" title="Course info" class="page">Course info</a>
+</p>
+
+<h1>Second part | Rational agents</h1>
+
+<br>
+
+
+<hr>
+
+<br>
+<br>
+
+<p>
+<b>Intelligent Systems: </b>is about building intelligent agents; and is a subfield of AI<br>
+<ul>
+<li>this means building a rational agent that:
+<ol type="1" start="1">
+<li>chooses actions</li>
+<li>maximizes the expected value of the performance measure given the <i>percepts; a sequence of instructions.</i></li>
+<li>According to the knowledge of its environment.</li>
+</ol>
+</li>
+<li>This course, concept of agents, is based on the book Modern intro to AI; by Russell and Norvig</li>
+</ul>
+</p>
+
+<br>
+
+<h4>Agents</h4>
+
+<br>
+
+<h4>Rationality</h4>
+
+<p>
+Is about maximizing the expected value of the actions according the knowledge you have.<br>
+<sub>What is rational at given time depends on</sub><br>
+<ul>
+<li>Expected value of performance measure (heuristics)</li>
+<li>Actions and choices (Search)</li>
+<li>Percept sequence to date (Learning)</li>
+<li>Prior environment knowledge, (KR)</li>
+</ul>
+</p>
+
+<br>
+
+<h4>Task</h4>
+
+<p>
+<sub>AN example of a fully automated taxi</sub><br>
+<ul>
+<li>Performance (what it does)
+<ul>
+<li>safety, destination, profits, legality and comfort</li>
+</ul></li>
+</ul>
+Environment (where it does it)<br>
+<ul style='padding-left: 30pt'>
+<li>streets other traffic and pedestrians</li>
+</ul>
+<ul>
+<li>Actuators (how it does it)
+<ul>
+<li>steering, accelerating, brake, horn and speaker</li>
+</ul>
+</li>
+<li>Sensors (what it perceives)
+<ul>
+<li>Video, sonar, speedometer, engine sensors, keyboard,</li>
+</ul></li>
+</ul>
+<div style='padding-left: 30pt'>
+GPS
+</div>
+</p>
+
+<br>
+
+<h4>Environments</h4>
+
+<p>
+Different types in which the agents should take into account<br>
+<ul>
+<li><b>Observable</b>: fully vs partially; is the information you got fully or partially available?</li>
+<li><b>Deterministic</b>: deterministic vs stochastic; after taking an action, do you exactly know where you'll end up? 
+<ul>
+<li>What will the next state look like after taking a certain action?</li>
+</ul>
+</li>
+<li><b>Static: </b> static vs dynamic; will the environment change after the agent takes a certain action?</li>
+<li><b>Discrete: </b>discrete vs continuous; is there a finite number of actions that could be taken or an infinite one?</li>
+<li><b>Single-agent: </b>does the environment contain other agents who also maximize performance measure?</li>
+</ul>
+</p>
+
+<p>
+Environments are either simple or hard; in the real world, u will encounter the harder one; most likely; partially observable, undeterministic, dynamic, continuous and multi-agents!
+</p>
+
+<h4>Agent types</h4>
+
+<p>
+<ul>
+<li>Simple reflex; measures something and takes actions accordingly.</li>
+<li>Reflex and state; the state is a representation of the world; which includes some </li>
+</ul>
+interpretations of the world(i.e. how it'd be and the possible outcomes)<br>
+<ul>
+<li>Goal-based; an agent should have a goal so that it knows what the desired result would be and then chooses appropriate actions.</li>
+</ul>
+</p>
+
+<br>
+<br>
+
+<h1>Third part</h1>
+
+<br>
+
+
+<hr>
+
+<br>
+
+<h5>REPRESENTING PROBLEMS AS STATE SPACE PROBLEMS</h5>
+
+<p>
+For example a vacuum machine that has two state; <br>
+<ol type="1" start="1">
+<li>Where to hover(to clean)?</li>
+</ol>
+Of course the real world is absurdly complex, but this example is made simple intentionally<br>
+<ul>
+<li>define what the states are; clean or dirty</li>
+<li>how the hover should decide where to move to clean the rooms?</li>
+</ul>
+</p>
+
+<p>
+<b>State space: </b>Should be abstracted form problem solving<br>
+<ul>
+<li>Start with a concrete real-life problem</li>
+<li>Formulate abstract, algorithmic problem 
+<ul>
+<li>Formulate states </li>
+<li>Actions</li>
+</ul>
+</li>
+<li>Formulate concrete and algorithmic goal 
+<ul>
+<li>Clean the house / be in state 7 and 8</li>
+</ul>
+</li>
+<li>Find solution 
+<ul>
+<li>Sequence of actions to get to state 7 or 8</li>
+</ul>
+</li>
+<li>Execute plan
+<ul>
+<li>Move and clean according to the (abstract) solution</li>
+</ul></li>
+</ul>
+</p>
+
+<br>
+
+<p>
+<img src="./Introduction/pasted_image001.png">
+</p>
+
+<p>
+<ul>
+<li>What actions and states to consider given a goal
+<ul>
+<li>What are appropriate states and the initial states?</li>
+<li>What are possible actions to move between states?</li>
+<li>What is the cost of an action?</li>
+</ul>
+</li>
+<li>Goal formulation
+<ul>
+<li>What are the successful world states</li>
+</ul>
+</li>
+<li>Search
+<ul>
+<li>Determine possible sequences of actions that lead to goal states and choose the “best” sequence.</li>
+</ul>
+</li>
+<li>Execute
+<ul>
+<li>Give the solution perform the actions.</li>
+</ul></li>
+</ul>
+</p>
+
+<h5>Summary</h5>
+
+<p>
+Start with defining what the different states are, then formulate a mathematical approach in which the program gets to the desired outcome.
+</p>
+
+            </div>
+            <div class="fade fade-bottom"></div>
+          </section>
+
+          <footer>
+              <a href="#" class="scrollToTop" title="Back to top"><i class="icon icon-uploadalt"></i></a>
+              <b>Backlinks:</b>
+              <a class="page" href='../../Intelligent_systems.html'>Intelligent systems</a>
+              <br /><br />
+          </footer>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../_resources/js/jquery.v2.1.3.min.js"></script>
+  <script src="../../_resources/js/index.js"></script>
+
+</body>
+</html>

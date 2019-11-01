@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<!-- based on a Pen by Devilish Alchemist @ http://codepen.io/devilishalchemist/pen/LERvpM -->
+<head>
+  <meta charset="UTF-8">
+  <title>Watson & Jeopardy</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../_resources/css/normalize.min.css">
+  <link rel="stylesheet" href="../_resources/css/whhg.css">
+  <link rel="stylesheet" href="../_resources/css/fonts.css">
+  <link rel="stylesheet" href="../_resources/css/style.css">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <span id="view-toc" class="tooltip">&laquo; view index</span>
+    <span id="view-content" class="tooltip">return to content &raquo;</span>
+    <span id="view-next" class="tooltip">next page &raquo;</span>
+    <span id="view-prev" class="tooltip">&laquo; previous page</span>
+
+    <span class="menu_toggle">
+      <i class="menu_open icon icon-th-list"></i>
+      <i class="menu_close icon icon-import"></i>
+    </span>
+
+    <div id="navigation">
+      <ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a></li>
+<li><a href="../Intro_programming.html" title="Intro programming" class="page">Intro programming</a></li>
+<li><a href="../Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a>
+<ul>
+<li><a href="./AI_solutions.html" title="AI solutions" class="page">AI solutions</a></li>
+<li><a href="./alumni_lecture_01_10.html" title="alumni lecture 01 10" class="page">alumni lecture 01 10</a></li>
+<li><b>CW notes</b></li>
+<li><a href="./MB_notes.html" title="MB notes" class="page">MB notes</a></li>
+<li><a href="./MH_notes.html" title="MH notes" class="page">MH notes</a></li>
+<li><a href="./notes_final_meeting.html" title="notes final meeting" class="page">notes final meeting</a></li>
+<li><a href="./verification_validation_methods.html" title="verification validation methods" class="page">verification validation methods</a></li>
+</ul>
+</li>
+<li><a href="../Psychology.html" title="Psychology" class="page">Psychology</a></li>
+</ul>
+
+      <span class="zimversion">
+        <!-- <small>built with</small><br><strong>Zim 0.65</strong>
+        <br>
+        --
+        <br> -->
+        <a href="https://github.com/hasan-sh/AI_notes">see<br> on Github<br><i class="icon icon-github"></i></a>
+      </span>
+    </div>
+
+    <main class="content">
+      <div class="content_inner">
+        <article>
+          <header>
+            <a id="navPrev" href='./alumni_lecture_01_10.html'><span><i class="icon icon-chevron-left"></i></span></a>
+
+            <a id="navHome" href='../Home.html'><span><i class="icon icon-homealt"></i></span></a>
+
+            <a id="navNext" href='./MB_notes.html'><span><i class="icon icon-chevron-right"></i></span></a>
+          </header>
+
+          <section>
+            <div class="page-title">
+              <h1><i class="icon icon-bookmarkalt"></i> Watson & Jeopardy <a name='Intro to AI:CW notes'></a></h1>
+            </div>
+            <div class="fade fade-top"></div>
+            <div class="page-body">
+              <h3>By Chris Welty | Google research</h3>
+
+<br>
+
+<p>
+Started 25y ago in sth in the area of AI. Moved to Became a professor at he VU 6y ago. Started at google in 2014.
+</p>
+
+<p>
+Now working on google maps; trying to search whatever product user interested in in a semantic manner.
+</p>
+
+<p>
+A challenge to AI: natural language(till now; no machine does this perfectly)
+</p>
+
+<p>
+&gt; How can we exploit this knowledge to solve problems?
+</p>
+
+<p>
+Give: - rich NL questions - over a board domain of knowledge
+</p>
+
+<p>
+Deliver: - precise answers: get the most relevant answer to the user's question - accurate confidences: determine likelihood answer is correct - consumable justficaitons: machine should give the source of where it got the answer from - fast response time: too long atm
+</p>
+
+<p>
+Problems machines face:
+</p>
+
+<p>
+Chris compares human language with chess, that it's a sort of test for some kind of intelligence; moves are countable, language however has an infinite number of possible responses.
+</p>
+
+<p>
+Jeopardy: an american game show(quiz show!!) since 1964!
+</p>
+
+<p>
+Machine would be good at the broad domain, humans wouldn't. - Understanding the language is difficult for machines, less for humans
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>high Precision is difficult for both</li>
+<li>Accurate confidence: humans would be confident giving accurate answers, however machines wouldn't</li>
+<li>High speed, humans would be slower than machines.</li>
+</ul>
+</p>
+
+<p>
+&gt; AI was familiar to ppl only through movies, which showed a bad side of it. Watson changed that perspective
+</p>
+
+<p>
+The mechanism of answering questions watson uses is: - finding the most relevant answers(texts) that match the question. - Another way is by matching keywrods from the question with the ones in the knowledge base.(like in web search back in the day) - different types of evidence(hybridization): temoral reasoning, statistical paraphrasing and geiospatial reasoning
+</p>
+
+<p>
+There are many different layers for finding the answer for a question, watson finds many many answers and keywords, in a layer that's called <i>evidence and hypotheses scoring</i> linear algebra is used to decide which score would most likely be the answer(or keyword of hte answer)
+</p>
+
+<p>
+Questions: - how is the knowledge base stored inthe database of watson?
+</p>
+
+
+            </div>
+            <div class="fade fade-bottom"></div>
+          </section>
+
+          <footer>
+              <a href="#" class="scrollToTop" title="Back to top"><i class="icon icon-uploadalt"></i></a>
+              <b>Backlinks:</b>
+              <a class="page" href='../Intro_to_AI.html'>Intro to AI</a>
+              <br /><br />
+          </footer>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="../_resources/js/jquery.v2.1.3.min.js"></script>
+  <script src="../_resources/js/index.js"></script>
+
+</body>
+</html>

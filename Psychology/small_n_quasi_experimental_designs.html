@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<!-- based on a Pen by Devilish Alchemist @ http://codepen.io/devilishalchemist/pen/LERvpM -->
+<head>
+  <meta charset="UTF-8">
+  <title>Small-N and quasi-experimental designs</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../_resources/css/normalize.min.css">
+  <link rel="stylesheet" href="../_resources/css/whhg.css">
+  <link rel="stylesheet" href="../_resources/css/fonts.css">
+  <link rel="stylesheet" href="../_resources/css/style.css">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <span id="view-toc" class="tooltip">&laquo; view index</span>
+    <span id="view-content" class="tooltip">return to content &raquo;</span>
+    <span id="view-next" class="tooltip">next page &raquo;</span>
+    <span id="view-prev" class="tooltip">&laquo; previous page</span>
+
+    <span class="menu_toggle">
+      <i class="menu_open icon icon-th-list"></i>
+      <i class="menu_close icon icon-import"></i>
+    </span>
+
+    <div id="navigation">
+      <ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a></li>
+<li><a href="../Intro_programming.html" title="Intro programming" class="page">Intro programming</a></li>
+<li><a href="../Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a></li>
+<li><a href="../Psychology.html" title="Psychology" class="page">Psychology</a>
+<ul>
+<li><a href="./biology_behavior.html" title="biology behavior" class="page">biology behavior</a></li>
+<li><a href="./correlation_experiments.html" title="correlation experiments" class="page">correlation experiments</a></li>
+<li><a href="./experiments_factors_designs.html" title="experiments factors designs" class="page">experiments factors designs</a></li>
+<li><a href="./learning_notes.html" title="learning notes" class="page">learning notes</a></li>
+<li><a href="./measurement_reliability_notes.html" title="measurement reliability notes" class="page">measurement reliability notes</a></li>
+<li><a href="./memory_notes.html" title="memory notes" class="page">memory notes</a></li>
+<li><a href="./scientific_reasoning.html" title="scientific reasoning" class="page">scientific reasoning</a></li>
+<li><b>small n quasi experimental designs</b></li>
+<li><a href="./thinkning_intelligence_notes.html" title="thinkning intelligence notes" class="page">thinkning intelligence notes</a></li>
+<li><a href="./validity_notes.html" title="validity notes" class="page">validity notes</a></li>
+</ul></li>
+</ul>
+
+      <span class="zimversion">
+        <!-- <small>built with</small><br><strong>Zim 0.65</strong>
+        <br>
+        --
+        <br> -->
+        <a href="https://github.com/hasan-sh/AI_notes">see<br> on Github<br><i class="icon icon-github"></i></a>
+      </span>
+    </div>
+
+    <main class="content">
+      <div class="content_inner">
+        <article>
+          <header>
+            <a id="navPrev" href='./scientific_reasoning.html'><span><i class="icon icon-chevron-left"></i></span></a>
+
+            <a id="navHome" href='../Home.html'><span><i class="icon icon-homealt"></i></span></a>
+
+            <a id="navNext" href='./thinkning_intelligence_notes.html'><span><i class="icon icon-chevron-right"></i></span></a>
+          </header>
+
+          <section>
+            <div class="page-title">
+              <h1><i class="icon icon-bookmarkalt"></i> Small-N and quasi-experimental designs <a name='Psychology:small n quasi experimental designs'></a></h1>
+            </div>
+            <div class="fade fade-top"></div>
+            <div class="page-body">
+              <h2>Small-N studies</h2>
+
+<br>
+
+<p>
+Is about having a few participants, could be one, two or more. Data for each individual are presented; unlike per group. This study is mostly a repeated-measure small-N design; it's not <i>repeated-measure design</i>, because each group's exposed to all levels and you should counterbalance.
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Psychophysics: study stimuli and sensory(example in the slides)</li>
+</ul>
+&gt; if there's not many variations across individuals, you're most likely to make a causal claim
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Behavior-change study
+<ul>
+<li>Stable-baseline design(AB design): participant starts in a baseline, then a treatment provided, then tested again after or during the treatment.</li>
+</ul></li>
+</ul>
+&gt; e.g. child cries, researchers want to reinforce that behavior(reinforcement ). Suggested to ignore the child when crying and pay attention when isn't; reward him. On the baseline phase(A), the episodes were a lot, after the therapy. However, this is n't enough to claim that the therapy worked. Cause we don't know if there was another explanation.
+</p>
+
+<p>
+&gt; a way to to make sure the therapy was the cause, use the
+</p>
+
+<p>
+<ul style='padding-left: 60pt'>
+<li>Reversed stable-baseline design(ABAB): e.g. the child was going to the baseline phase one more time to check whether he will exhibit more crying episode.</li>
+</ul>
+&gt; This design cannot be used when the dependent variable has a permanent effect; e.g. learning method
+</p>
+
+<p>
+<ul style='padding-left: 60pt'>
+<li>Multiple-baseline design: multiple participants. Impose a method on several participants, and compare the results.</li>
+</ul>
+</p>
+
+<p>
+Small-N studies =&gt; often aim to generate causal claims, but internal validity is not very high. Of course you should still question the other validities.
+</p>
+
+<h2>Quasi-experimental studies</h2>
+
+<br>
+
+<p>
+The difference between a quasi-experiment and a true experiment is that in quasi-experiment researchers don't have much experimental control. Selecting independent and dependent variables and then study participants exposed to each level of the IVs. But they cannot always randomly assign participants to each level; participants might be assigned by teachers, political regulations, acts of nature or by themselves!
+</p>
+
+<h3>Quasi-experiment designs</h3>
+
+<br>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><i>Nonequivalent control group(pretest/posttest)</i>: A between-subjects quasi-experiment. In which participants aren't randomly assigned to groups and two groups present; treatment group and comparison group</li>
+</ul>
+&gt; Treatment group is a groups in which participants are exposed/influenced to/by certain effects. A comparison group, however, they are not.
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><i>Nonequivalent control group pretest/posttest</i>: A between-subjects quasi-experiment. In which participants aren't randomly assigned to groups and two groups present; treatment group and comparison group. AND participants are tested before and after some intervention(event).</li>
+</ul>
+&gt; This design might be a threat to internal validity, thus matched group should be created in order to avoid any confounding design.
+</p>
+
+<p>
+&gt; e.g. the treatment group who had a plastic surgery and comparison group who didn't(both groups weren't randomly assigned). Questionnaire about self-esteem, well-being and life satisfaction were given before the surgery, after 3, 6 and 12 months to both groups. Results showed an increase by the treatment group and the same or worse rate on the comparison group.
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><i>Interrupted time-series</i>: A repeated-measure quasi-experiment design. In which participants are repeatedly measured on a DV before, during and after the interruption caused by some event.</li>
+</ul>
+&gt; e.g. DV parole decision making in the example of the judges who gave fewer paroles after a few cases than right after a food break(interruption).
+</p>
+
+<p>
+&gt; It might be the case that DV doesn't lead to threat to internal validity, thus a control group should be introduced.
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><i>Nonequivalent control group interrupted time-series</i>: a combination of the two designs.</li>
+</ul>
+&gt; e.g. health care law in US. 2 groups: the treatment group from a state where health care law was established in 2006 and the comparison group is from another state where the same law wasn't established yet. There were several DVs, but the measured one here is foregoing to the doctor because of cost. Data was collected on 2002-2005 and 2007-2009. It showed that both groups had similar results for foregoing medical care before the law was established, however, the treatment group showed a decreased rate of that cause(not getting medical care because of costs) after the law was established, while the comparison group showed the same as previous years.
+</p>
+
+<br>
+
+<h3>Threats to internal validity</h3>
+
+<br>
+
+<p>
+Are there alternative explanations for an observed pattern of results?
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><i>Selection effect</i>; e.g. participants who had done the surgery, might have been wealthier than those who had had the desire to do it, but didn't do it.</li>
+</ul>
+&gt; The researchers could then create matched group in order to avoid selection effects. They actually mad two matched groups from both treatment and comparison groups, in which participants had the same age, gender, body mass index and income. And yet the results were similar. Thus they avoided selection effects!
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><i>Design confound</i>; e.g. maybe prisoners whose cases came after the food break had less serious crimes and were fewer times in incarcerations than those who came after a few cases from the food break!</li>
+</ul>
+&gt; In this research, however, they tracked this potential confound variable by comparing the crimes seriousness and other factors. There wasn't distinguishable difference, thus that confound design didn't exist.
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><i>Maturation threat(only for pretest/posttest designs</i>; e.g. maybe those who had the cosmetic surgery, treatment group, and those who wanted but didn't, comparison group, just improved on self-esteem, life satisfaction or attractiveness because of maturation not the surgery?</li>
+</ul>
+&gt; But comparison group's participants showed worse results after the surgery in these factors. Thus maturation wasn't the cause, but the surgery; perhaps.
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><i>History threat</i>; some historical event happens in during the research. And either groups could be affected by it; e.g. economic upturn in the case of health care new law; that wasn't the threat however, because it doesn't justify why the other group didn't experience the same effects.</li>
+<li><i>Regression to the mean</i>: only for pretest/posttest designs and only when one of a group selected because of its high or low scores</li>
+</ul>
+&gt; This threat happens when random factors cause a different than usual results, and this combination of random factors doesn't occur again.
+</p>
+
+<p>
+&gt; E.g. Germany's win on Brazil 7-1; was an example of regression to the mean
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li><i>Attrition threat</i>; is when individuals drop out of a study for some reason</li>
+</ul>
+</p>
+
+<h3>Balancing priorities in quasi-experiments</h3>
+
+<br>
+
+<p>
+Why do researchers use quasi-experiments if true experiments are better?
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Real-world opportunities: in some matters, like new health care law, researchers cannot assign participants(ppl in two cities) randomly; simply because one city has the new law the other doesn't. Or the study of judges giving more paroles immediately after having a food break</li>
+</ul>
+&gt; Researchers don't control the variables.
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>External validity: because of the real-world settings of many quasi-experiments, you don't have to ask many of the external validity questions; do this results apply in real-world situation?; it already happened in a real-world situation!</li>
+</ul>
+&gt; you could still ask whether a study generalizes to different places or people; e.g. the judges study, does it happen across different countries or judges?
+</p>
+
+<p>
+<ul style='padding-left: 30pt'>
+<li>Construct and statistical validities: quasi-experiments often show good construct validity. Since participants either do the action(IV's level) or not(the other level); judges either take a food break or not. You should still ask how well were the DVs measured. How large the group differences was(effect size) and whether results were statistically significant.</li>
+</ul>
+</p>
+
+<h2>Questions</h2>
+
+<br>
+
+
+            </div>
+            <div class="fade fade-bottom"></div>
+          </section>
+
+          <footer>
+              <a href="#" class="scrollToTop" title="Back to top"><i class="icon icon-uploadalt"></i></a>
+              <b>Backlinks:</b>
+              <a class="page" href='../Psychology.html'>Psychology</a>
+              <br /><br />
+          </footer>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="../_resources/js/jquery.v2.1.3.min.js"></script>
+  <script src="../_resources/js/index.js"></script>
+
+</body>
+</html>

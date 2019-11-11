@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<!-- based on a Pen by Devilish Alchemist @ http://codepen.io/devilishalchemist/pen/LERvpM -->
+<head>
+  <meta charset="UTF-8">
+  <title>Adversarial Search</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../_resources/css/normalize.min.css">
+  <link rel="stylesheet" href="../../_resources/css/whhg.css">
+  <link rel="stylesheet" href="../../_resources/css/fonts.css">
+  <link rel="stylesheet" href="../../_resources/css/style.css">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <span id="view-toc" class="tooltip">&laquo; view index</span>
+    <span id="view-content" class="tooltip">return to content &raquo;</span>
+    <span id="view-next" class="tooltip">next page &raquo;</span>
+    <span id="view-prev" class="tooltip">&laquo; previous page</span>
+
+    <span class="menu_toggle">
+      <i class="menu_open icon icon-th-list"></i>
+      <i class="menu_close icon icon-import"></i>
+    </span>
+
+    <div id="navigation">
+      <ul>
+<li><a href="../../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../../Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a>
+<ul>
+<li><a href="../Home.html" title="Home" class="page">Home</a>
+<ul>
+<li><b>Adversarial Search</b></li>
+<li><a href="./Infromed_Search.html" title="Infromed Search" class="page">Infromed Search</a></li>
+<li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="./Uninformed_Search.html" title="Uninformed Search" class="page">Uninformed Search</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="../../Intro_programming.html" title="Intro programming" class="page">Intro programming</a></li>
+<li><a href="../../Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a></li>
+<li><a href="../../Psychology.html" title="Psychology" class="page">Psychology</a></li>
+</ul>
+
+      <span class="zimversion">
+        <!-- <small>built with</small><br><strong>Zim 0.65</strong>
+        <br>
+        --
+        <br> -->
+        <a href="https://github.com/hasan-sh/AI_notes">see<br> on Github<br><i class="icon icon-github"></i></a>
+      </span>
+    </div>
+
+    <main class="content">
+      <div class="content_inner">
+        <article>
+          <header>
+            <a id="navPrev" href='../Home.html'><span><i class="icon icon-chevron-left"></i></span></a>
+
+            <a id="navHome" href='../../Home.html'><span><i class="icon icon-homealt"></i></span></a>
+
+            <a id="navNext" href='./Infromed_Search.html'><span><i class="icon icon-chevron-right"></i></span></a>
+          </header>
+
+          <section>
+            <div class="page-title">
+              <h1><i class="icon icon-bookmarkalt"></i> Adversarial Search <a name='Intelligent systems:Home:Adversarial Search'></a></h1>
+            </div>
+            <div class="fade fade-top"></div>
+            <div class="page-body">
+              <p>
+Created woensdag 06 november 2019
+</p>
+
+<p>
+Minmax: one player is maximizing their success and the other is minimizing their loss.<br>
+<div style='padding-left: 30pt'>
+Schnapsen phase 2
+</div>
+<ul style='padding-left: 30pt'>
+<li>if current node is max; you maximize all possible values after your opponent plays a certain card</li>
+<li>if current node is min; you minimize all possible values after your opponent plays a certain card</li>
+</ul>
+<img src="./Adversarial_Search/pasted_image.png">
+</p>
+
+<br>
+<br>
+
+<p>
+The figure above describes how MAX maximizes the values to start with value of 3. It checks all successors of the MIN(i.e. how many options it has and the minimum value it would choose) then backtrack the values and chooses the maximum one. <br>
+<b>Performance </b>is measured in<br>
+<ul>
+<li>Completeness; does it always find a solution if exists? yes </li>
+<li>Optimality; does it always find the least-cost solution? n</li>
+<li>Time complexity; number of nodes checked/expanded?
+<ul>
+<li>would be expressed in: <b>b^m</b></li>
+</ul>
+</li>
+<li>Space complexity; number of nodes stored in the state representation?</li>
+<li>would be expressed in: <b>b </b>times <b>m = bm</b></li>
+</ul>
+</p>
+
+<br>
+<br>
+
+<p>
+Some games are so complex which make.s the state space so huge. Cutting off search can help with that:<br>
+<ul>
+<li>fixed-depth limited search; how many steps you try to predict; that's how many steps your opponent could play</li>
+</ul>
+</p>
+
+<p>
+Heuristic Eval<br>
+<ul>
+<li>should be fast</li>
+<li>only useful for quiescent</li>
+<li>Performance of the Heuristic depends on the Heuristic Eval function</li>
+</ul>
+</p>
+
+<br>
+
+<p>
+<sub>Horizon effect: after a huge set of moves, the next state would not be possible to predict; in chess for instance.</sub>
+</p>
+
+<br>
+
+<p>
+WIth partial knowledge stage, a belief states helps with making decisions. E.g. in Schnapsen phase one, we have imperfect knowledge of the other player's and stock's cards. So, we could make assumptions with each card we could play and how the belief state will change after taking that action. <br>
+<sub>If we reach the goal state, then the action we took is good enough</sub>
+</p>
+
+<br>
+
+<h4>Alpha-beta pruning</h4>
+
+<br>
+
+<p>
+<b>Pruning </b>is the case when a part of the expanded node isn't explored, thus eliminated, because of a condition that had already been explored/examined. This is quit beneficial, because less iterations are made.
+</p>
+
+
+            </div>
+            <div class="fade fade-bottom"></div>
+          </section>
+
+          <footer>
+              <a href="#" class="scrollToTop" title="Back to top"><i class="icon icon-uploadalt"></i></a>
+          </footer>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../_resources/js/jquery.v2.1.3.min.js"></script>
+  <script src="../../_resources/js/index.js"></script>
+
+</body>
+</html>

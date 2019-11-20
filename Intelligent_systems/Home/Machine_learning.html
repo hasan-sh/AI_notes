@@ -3,15 +3,15 @@
 <!-- based on a Pen by Devilish Alchemist @ http://codepen.io/devilishalchemist/pen/LERvpM -->
 <head>
   <meta charset="UTF-8">
-  <title>Intro programming</title>
+  <title>Machine learning</title>
 
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="./_resources/css/normalize.min.css">
-  <link rel="stylesheet" href="./_resources/css/whhg.css">
-  <link rel="stylesheet" href="./_resources/css/fonts.css">
-  <link rel="stylesheet" href="./_resources/css/style.css">
+  <link rel="stylesheet" href="../../_resources/css/normalize.min.css">
+  <link rel="stylesheet" href="../../_resources/css/whhg.css">
+  <link rel="stylesheet" href="../../_resources/css/fonts.css">
+  <link rel="stylesheet" href="../../_resources/css/style.css">
 
   <style>
   
@@ -513,15 +513,25 @@ blockquote {
 
     <div id="navigation">
       <ul>
-<li><a href="./Home.html" title="Home" class="page">Home</a></li>
-<li><a href="./Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a></li>
-<li><b>Intro programming</b>
+<li><a href="../../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../../Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a>
 <ul>
-<li><a href="./Intro_programming/Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Home.html" title="Home" class="page">Home</a>
+<ul>
+<li><a href="./Adversarial_Search.html" title="Adversarial Search" class="page">Adversarial Search</a></li>
+<li><a href="./Important_Symbols.html" title="Important Symbols" class="page">Important Symbols</a></li>
+<li><a href="./Infromed_Search.html" title="Infromed Search" class="page">Infromed Search</a></li>
+<li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><b>Machine learning</b></li>
+<li><a href="./Models.html" title="Models" class="page">Models</a></li>
+<li><a href="./Uncertainty_and_Vagueness.html" title="Uncertainty and Vagueness" class="page">Uncertainty and Vagueness</a></li>
+<li><a href="./Uninformed_Search.html" title="Uninformed Search" class="page">Uninformed Search</a></li>
+</ul></li>
 </ul>
 </li>
-<li><a href="./Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a></li>
-<li><a href="./Psychology.html" title="Psychology" class="page">Psychology</a></li>
+<li><a href="../../Intro_programming.html" title="Intro programming" class="page">Intro programming</a></li>
+<li><a href="../../Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a></li>
+<li><a href="../../Psychology.html" title="Psychology" class="page">Psychology</a></li>
 </ul>
 
       <span class="zimversion">
@@ -537,29 +547,152 @@ blockquote {
       <div class="content_inner">
         <article>
           <header>
-            <a id="navPrev" href='./Intelligent_systems/Home/Uninformed_Search.html'><span><i class="icon icon-chevron-left"></i></span></a>
+            <a id="navPrev" href='./Introduction.html'><span><i class="icon icon-chevron-left"></i></span></a>
 
-            <a id="navHome" href='./Home.html'><span><i class="icon icon-homealt"></i></span></a>
+            <a id="navHome" href='../../Home.html'><span><i class="icon icon-homealt"></i></span></a>
 
-            <a id="navNext" href='./Intro_programming/Home.html'><span><i class="icon icon-chevron-right"></i></span></a>
+            <a id="navNext" href='./Models.html'><span><i class="icon icon-chevron-right"></i></span></a>
           </header>
 
           <section>
             <div class="page-title">
-              <h1><i class="icon icon-bookmarkalt"></i> Intro programming <a name='Intro programming'></a></h1>
+              <h1><i class="icon icon-bookmarkalt"></i> Machine learning <a name='Intelligent systems:Home:Machine learning'></a></h1>
             </div>
             <div class="fade fade-top"></div>
             <div class="page-body">
               <p>
-Created vrijdag 01 november 2019
+Created dinsdag 19 november 2019
+</p>
+
+<h3>Types of Learning</h3>
+
+<p>
+<b>Types</b><br>
+<ol type="1" start="1">
+<li>supervised learning: in which the system gets a large set of samples
+<ul>
+<li>positive examples; you get only the part the system should find</li>
+<li>positive and negative examples; you get mixed data of what hte system knows and the ones it's ignorant of</li>
+</ul>
+</li>
+<li>unsupervised learning: no correct answers given.</li>
+<li>semi-supervised learning: the system would ask more infomation abou the domain it's supposed to learn</li>
+<li>Reinforcement learning: an ongoing process in which the agent gets data over time and then it gets feedback to evaluate whether a certain action is good/bad or wanted or not.</li>
+</ol>
 </p>
 
 <p>
-<a href="./Intro_programming/Home.html" title="Intro_programming:Home" class="page">Intro_programming:Home</a><br>
-<a href="./Intro_programming/Home/01.html" title="Intro_programming:Home:01" class="page">Intro_programming:Home:01</a><br>
-<a href="./Intro_programming/Home/02.html" title="Intro_programming:Home:02" class="page">Intro_programming:Home:02</a><br>
-<a href="./Intro_programming/Home/03.html" title="Intro_programming:Home:03" class="page">Intro_programming:Home:03</a>
+<b>Problems</b><br>
+<ol type="1" start="1">
+<li>Classification: a set of things, and then you classify them accordingly
+<ol type="a" start="1">
+<li>example of a given image which contains different symbol: you have different classes; which gives perspective to what the symbols mean</li>
+<li>Spam filtering: predicting whether an email is spam or not; the classes here would be actual spam emails to be compared with the given data.</li>
+<li>Face recognition: recognizing a face among millions</li>
+<li>Whether prediction: to determine whether it's going to snow, rain or be sunny; classes are a large set of data to classify</li>
+<li>Self-driving cars: </li>
+</ol>
+</li>
+<li>Regression: when there's an input and you'll get to estimate what that number for any specific data mean.
+<ol type="a" start="1">
+<li>Stock market;</li>
+<li>Whether prediction; the numbers from previous data set would be estimated to make the prediction</li>
+</ol>
+</li>
+<li>Rankning: try to rank different things
+<ol type="a" start="1">
+<li>Web search: what people mostly look for or what the order of <i>importance</i> is</li>
+<li>Find similar images: give image, find similar ones(what Google does) </li>
+</ol>
+</li>
+<li>Collaborative filtering: a technique of getting feedback; counts on users to provide the feedback; ranking
+<ol type="a" start="1">
+<li>Recommendation; like a certain book and ur friend has a book that isn't in ur list, it compares that book with urs(i.e. genre type) and recommend it to u</li>
+</ol>
+</li>
+<li>Clustering: rule is similar things should be grouped together as well as that similarity should be defined.
+<ol type="a" start="1">
+<li>group similar things; </li>
+<li>clustering images; you get a big set of images that aren't known to the system, then you could make sense of known ones, e.g. dog and cat images, and then see what clusters belong to what</li>
+</ol></li>
+</ol>
 </p>
+
+<h3>Methodology</h3>
+
+<p>
+<b>Classification</b><br>
+<ol type="1" start="1">
+<li>Data; labelled instances; emails marked spam/ham
+<ol type="a" start="1">
+<li>training set</li>
+<li>held out set(sometines call Validation set); could be thought of as exercises for each module in a course</li>
+<li>test set; a small chunk of the data to test whether the system performs well; can be thought of as the exam for that course</li>
+</ol>
+</li>
+<li>Features; attribute-value pairs, which characterize each x(variables in the data)</li>
+<li>Experimentation cycle: 
+<ol type="a" start="1">
+<li>selecting a hypothesis; a model of the data</li>
+<li>compute </li>
+<li>very important: never peek at tthe test set; while doing the evaluation set(the training set without the other set; test set)</li>
+</ol>
+</li>
+<li>Evaluation: 
+<ol type="a" start="1">
+<li>Cross-validation; spliting all the set to perform on; so that all data set would be used as a hypothesis of the cycle(i.e. each set of the data has a chance to be trained and tested)</li>
+</ol></li>
+</ol>
+<div style='padding-left: 90pt'>
+<img src="./Machine_learning/pasted_image.png">
+</div>
+</p>
+
+<br>
+
+<p>
+<sub>Classification is about predicting the correct class label and NOT about accurately estimating probabilities.</sub>
+</p>
+
+<p>
+<b>Evaluation of clustering</b><br>
+<ol type="1" start="1">
+<li>Internal criterion: 
+<ol type="a" start="1">
+<li>intra-class(cluster) similarity is high</li>
+<li>Inter-class similarity is low</li>
+</ol>
+</li>
+<li>External criteria: e.g. End-to-End; criteria can be set by users for instance</li>
+</ol>
+</p>
+
+<p>
+<b>Example</b><br>
+<ul>
+<li>Choose the features</li>
+<li>Choose the model class</li>
+<li>Choose a search method</li>
+</ul>
+<img src="file:///home/hasan_sh/Pictures/ex_ml.png">
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
             </div>
             <div class="fade fade-bottom"></div>
@@ -668,8 +801,8 @@ $(document).ready(function(){
   </script>
 
 
-<script src="./_resources/js/jquery.v2.1.3.min.js"></script>
-<script src="./_resources/js/index.js"></script>
+<script src="../../_resources/js/jquery.v2.1.3.min.js"></script>
+<script src="../../_resources/js/index.js"></script>
 
 </body>
 </html>

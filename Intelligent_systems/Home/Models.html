@@ -3,15 +3,15 @@
 <!-- based on a Pen by Devilish Alchemist @ http://codepen.io/devilishalchemist/pen/LERvpM -->
 <head>
   <meta charset="UTF-8">
-  <title>Intro programming</title>
+  <title>Models</title>
 
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="./_resources/css/normalize.min.css">
-  <link rel="stylesheet" href="./_resources/css/whhg.css">
-  <link rel="stylesheet" href="./_resources/css/fonts.css">
-  <link rel="stylesheet" href="./_resources/css/style.css">
+  <link rel="stylesheet" href="../../_resources/css/normalize.min.css">
+  <link rel="stylesheet" href="../../_resources/css/whhg.css">
+  <link rel="stylesheet" href="../../_resources/css/fonts.css">
+  <link rel="stylesheet" href="../../_resources/css/style.css">
 
   <style>
   
@@ -513,15 +513,25 @@ blockquote {
 
     <div id="navigation">
       <ul>
-<li><a href="./Home.html" title="Home" class="page">Home</a></li>
-<li><a href="./Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a></li>
-<li><b>Intro programming</b>
+<li><a href="../../Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../../Intelligent_systems.html" title="Intelligent systems" class="page">Intelligent systems</a>
 <ul>
-<li><a href="./Intro_programming/Home.html" title="Home" class="page">Home</a></li>
+<li><a href="../Home.html" title="Home" class="page">Home</a>
+<ul>
+<li><a href="./Adversarial_Search.html" title="Adversarial Search" class="page">Adversarial Search</a></li>
+<li><a href="./Important_Symbols.html" title="Important Symbols" class="page">Important Symbols</a></li>
+<li><a href="./Infromed_Search.html" title="Infromed Search" class="page">Infromed Search</a></li>
+<li><a href="./Introduction.html" title="Introduction" class="page">Introduction</a></li>
+<li><a href="./Machine_learning.html" title="Machine learning" class="page">Machine learning</a></li>
+<li><b>Models</b></li>
+<li><a href="./Uncertainty_and_Vagueness.html" title="Uncertainty and Vagueness" class="page">Uncertainty and Vagueness</a></li>
+<li><a href="./Uninformed_Search.html" title="Uninformed Search" class="page">Uninformed Search</a></li>
+</ul></li>
 </ul>
 </li>
-<li><a href="./Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a></li>
-<li><a href="./Psychology.html" title="Psychology" class="page">Psychology</a></li>
+<li><a href="../../Intro_programming.html" title="Intro programming" class="page">Intro programming</a></li>
+<li><a href="../../Intro_to_AI.html" title="Intro to AI" class="page">Intro to AI</a></li>
+<li><a href="../../Psychology.html" title="Psychology" class="page">Psychology</a></li>
 </ul>
 
       <span class="zimversion">
@@ -537,29 +547,96 @@ blockquote {
       <div class="content_inner">
         <article>
           <header>
-            <a id="navPrev" href='./Intelligent_systems/Home/Uninformed_Search.html'><span><i class="icon icon-chevron-left"></i></span></a>
+            <a id="navPrev" href='./Machine_learning.html'><span><i class="icon icon-chevron-left"></i></span></a>
 
-            <a id="navHome" href='./Home.html'><span><i class="icon icon-homealt"></i></span></a>
+            <a id="navHome" href='../../Home.html'><span><i class="icon icon-homealt"></i></span></a>
 
-            <a id="navNext" href='./Intro_programming/Home.html'><span><i class="icon icon-chevron-right"></i></span></a>
+            <a id="navNext" href='./Uncertainty_and_Vagueness.html'><span><i class="icon icon-chevron-right"></i></span></a>
           </header>
 
           <section>
             <div class="page-title">
-              <h1><i class="icon icon-bookmarkalt"></i> Intro programming <a name='Intro programming'></a></h1>
+              <h1><i class="icon icon-bookmarkalt"></i> Models <a name='Intelligent systems:Home:Models'></a></h1>
             </div>
             <div class="fade fade-top"></div>
             <div class="page-body">
               <p>
-Created vrijdag 01 november 2019
+Created dinsdag 19 november 2019
+</p>
+
+<h2>Markov models</h2>
+
+<p>
+Prob.(specially in markov models) is about reasoning about sequence of events: speech recognition, robot localization or medical monitering<br>
+<sub>looking at the current situation and predicting what the next  would be.</sub>
+</p>
+
+<h5>Examples</h5>
+
+<p>
+<ol style='padding-left: 30pt' type="1" start="1">
+<li>reasoning about weahter: States: X = {rain, sun} then calculate the probable weather of the next day based on whether there was rain or sun; with the different numbers represetning the probability</li>
+</ol>
+<div style='padding-left: 30pt'>
+GET THE TABLES FROM SLIDES
+</div>
+</p>
+
+<h5>Transition probability</h5>
+
+<p>
+Specifiying how the state will change over time; from on state to another<br>
+Stationarity Assumption: assuming that the numbers of each state are static.<br>
+<sub>If you know X(t-1) and X(t) all what happened before(i.e. X1, X2..) isnt relevant anymore.</sub><br>
+Q1: (a markov chain)<b>It only look one step back in the sequence</b>; if yesterday was sunny and today is raining; probability of getting a raining day after a raining day is higher? But the probability is changing and not static(as the stationarity states?!)<br>
+<div style='padding-left: 30pt'>
+Answer: it only works in certain and simple situations; and this assumption is to make things easier
+</div>
 </p>
 
 <p>
-<a href="./Intro_programming/Home.html" title="Intro_programming:Home" class="page">Intro_programming:Home</a><br>
-<a href="./Intro_programming/Home/01.html" title="Intro_programming:Home:01" class="page">Intro_programming:Home:01</a><br>
-<a href="./Intro_programming/Home/02.html" title="Intro_programming:Home:02" class="page">Intro_programming:Home:02</a><br>
-<a href="./Intro_programming/Home/03.html" title="Intro_programming:Home:03" class="page">Intro_programming:Home:03</a>
+Q2: What about all the next days?<br>
+<ul>
+<li>Apply a simulation to all the current states until you get to day; <b>forward simulation; will end </b></li>
+</ul>
+Generalization: <br>
+p	......... 75%<br>
+1-p  ......... 25%<br>
+Stationary distribution PinfX = Pinf + 1(x) = sum of P(X|x)Pinf(X)<br>
+Pinf(sun) = P(sun|sun)Pinf(sun)+P(sun|rain)Pinf(rain)<br>
+Pinf(rain) = P(rain|sun)Pinf(sun)+P(rain|rain)Pinf(rain)<br>
+Pinf(sun) = 0.9Pinf(sun) + 0.3Pinf(rain)<br>
+Pinf(rain) = 0.1Pinf(sun) + 0.7Pinf(rain)<br>
+Pinf(sun) = 3Pinf(rain)<br>
+Pinf(rain) = 1/3Pinf(sun)<br>
+And: Pinf(sun) + Pinf(rain) = 1    =&gt; Pinf(sun) = 3/4<br>
+<div style='padding-left: 210pt'>
+   Pinf(rain) = 1/4
+</div>
 </p>
+
+<p>
+<ol style='padding-left: 30pt' type="1" start="2">
+<li>clicking links on a web page(<b>PageRank); </b>what Google did</li>
+</ol>
+</p>
+
+<h2>Bayesian Networks</h2>
+
+<p>
+(Bayes' Nets) Graphical model = graph + local conditional probability<br>
+IN a graph you got<br>
+<ul>
+<li>Nodes; variables(with domains)</li>
+<li>Arcs: interactions; indicates direct influence between the variables; they are acyclic(no cycles)</li>
+</ul>
+You create a table of the different variables to<br>
+<ul>
+<li>easier read the </li>
+<li>better for Big O</li>
+</ul>
+</p>
+
 
             </div>
             <div class="fade fade-bottom"></div>
@@ -668,8 +745,8 @@ $(document).ready(function(){
   </script>
 
 
-<script src="./_resources/js/jquery.v2.1.3.min.js"></script>
-<script src="./_resources/js/index.js"></script>
+<script src="../../_resources/js/jquery.v2.1.3.min.js"></script>
+<script src="../../_resources/js/index.js"></script>
 
 </body>
 </html>
